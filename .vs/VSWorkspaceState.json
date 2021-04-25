@@ -1,11 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\part0",
     "\\part0\\0.3",
     "\\part1",
-    "\\part1\\src"
+    "\\part1\\anecdote-generator\\src",
+    "\\part1\\unicafe\\src",
+    "\\part2"
   ],
-  "SelectedNode": "\\part1\\src\\Button.js",
+  "SelectedNode": "\\part1\\src",
   "PreviewInSolutionExplorer": false
 }
