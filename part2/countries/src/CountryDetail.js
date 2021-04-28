@@ -1,14 +1,27 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { format } from 'util';
 
 const CountryDetail = ({ country }) => {
-  const [weather, setWeather] = useState([])
+  let [weather, setWeather] = useState([])
   const api_key = process.env.REACT_APP_API_KEY
+  const params = {
+    access_key: api_key,
+    query: country.name
+  }
+  console.log(api_key)
+  console.log('weather:', weather)
+
   const hook = () => {
+    console.log('called hook')
+    console.log('weather:', weather)
     axios
-      .get(`http://api.weatherstack.com/current?access_key=${api_key}&query`)
+      .get('https://api.weatherstack.com/current', { params })
       .then(response =>
         setWeather(response.data))
+      .catch(error =>
+        console.log(error))
+    console.log('https://api.weatherstack.com/current?access_key=' + api_key + '?query=' + country.name)
   }
 
   useEffect(hook, [])
@@ -27,6 +40,7 @@ const CountryDetail = ({ country }) => {
     /*<img src={country.flag} alt='flag' />*/
       <div>
         {weather}
+      </div>
     </>
   )
 }

@@ -13,13 +13,12 @@ const Countries = ({ countriesToShow }) => {
     )
   }
   else {
-    console.log(countriesToShow.length)
     return (
       <>
         {countriesToShow.map(country =>
           <>
             <p key={country.name}>{country.name}</p>
-            <ShowButton country={country} />
+            <ShowButton key={country.capital} country={country} />
           </>
         )
           }
