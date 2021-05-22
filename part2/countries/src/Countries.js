@@ -17,8 +17,7 @@ const Countries = ({ countriesToShow }) => {
       <>
         {countriesToShow.map(country =>
           <>
-            <p key={country.name}>{country.name}</p>
-            <ShowButton key={country.capital} country={country} />
+            <p key={country.name}>{country.name}    <ShowButton key={country.capital} country={country} /></p>            
           </>
         )
           }

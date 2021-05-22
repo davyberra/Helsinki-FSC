@@ -29,6 +29,18 @@
       "date": "2021-05-22T01:35:10.726Z",
       "important": false,
       "id": 5
+    },
+    {
+      "content": "Is it working?",
+      "date": "2021-05-22T22:46:13.960Z",
+      "important": true,
+      "id": 6
+    },
+    {
+      "content": "Now my console is clearer",
+      "date": "2021-05-22T22:47:16.701Z",
+      "important": false,
+      "id": 7
     }
   ]
 }

@@ -3,12 +3,11 @@
     "",
     "\\part1",
     "\\part1\\src",
-    "\\part2",
-    "\\part2\\countries",
+    "\\part1\\unicafe\\src",
     "\\part2\\countries\\src",
-    "\\part2\\phonebook",
-    "\\part2\\phonebook\\src"
+    "\\part2\\phonebook\\src",
+    "\\part2\\scratch\\src"
   ],
-  "SelectedNode": "\\part2\\countries\\src\\ShowButton.js",
+  "SelectedNode": "\\part1\\src\\App.js",
   "PreviewInSolutionExplorer": false
 }
