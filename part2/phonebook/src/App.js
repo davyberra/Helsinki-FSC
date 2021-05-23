@@ -4,6 +4,7 @@ import PersonForm from './PersonForm.js';
 import Numbers from './Numbers.js';
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
+import numbersService from './services/numbersService'
 
 const App = () => {
   const [persons, setPersons] = useState([])
@@ -40,15 +41,27 @@ const App = () => {
     }
 
     if (!repeat) {
-      setPersons(persons.concat(nameObject))
+      numbersService
+        .create(nameObject)
+        .then(returnedName => {
 
-    setNewName('')
-    setNewNumber('')
+          setPersons(persons.concat(returnedName))
+          setNewName('')
+          setNewNumber('')
+
+        })
     }
   }
 
+  const removeName = id => {
+    numbersService
+      .deleteNumber(id)
+      .then(returnedNumbers => {
+        setPersons(persons.map(person => person.id !== id))
+      })
+  }
+
   const handleInputName = (event) => {
-    console.log(newName)
     setNewName(event.target.value)
   }
 
@@ -78,7 +91,7 @@ const App = () => {
         handleInputNumber={handleInputNumber}
       />
       <h2>Numbers</h2>
-      <Numbers persons={personsToShow} />
+      <Numbers persons={personsToShow} removeName={removeName} />
     </div>
   )
 }
