@@ -26,6 +26,7 @@ const App = () => {
   const addName = (event) => {
     event.preventDefault()
     let repeat = false;
+    var curId;
 
     const nameObject = {
       name: newName,
@@ -34,8 +35,19 @@ const App = () => {
 
     let i = 0;
     for (i; i < persons.length; i++) {
-      if (persons[i].name.toLowerCase() === newName.toLowerCase()) {       
-        alert(`${newName} already exists in the phonebook`)
+      if (persons[i].name.toLowerCase() === newName.toLowerCase()) {
+        repeat = true
+        curId = persons[i].id              
+      }
+    }
+
+    if (repeat) {
+      if (window.confirm(`${newName} already exists in the phone book. Do you wish to update their phone number with the new one provided?`)) {
+        numbersService
+          .update(nameObject, curId)
+          .then(returnedName => {
+            setPersons(persons.map(person => person.id !== curId ? person : returnedName))
+          })
         repeat = true
       }
     }
@@ -45,20 +57,22 @@ const App = () => {
         .create(nameObject)
         .then(returnedName => {
 
-          setPersons(persons.concat(returnedName))
-          setNewName('')
-          setNewNumber('')
-
+          setPersons(persons.concat(returnedName))        
         })
     }
+
+    setNewName('')
+    setNewNumber('')
   }
 
   const removeName = id => {
-    numbersService
-      .deleteNumber(id)
-      .then(returnedNumbers => {
-        setPersons(persons.map(person => person.id !== id))
-      })
+    if (window.confirm("Are you sure you wish to delete this entry?")) {
+      numbersService
+        .deleteNumber(id)
+        .then(returnedNumbers => {
+          setPersons(persons.filter(person => person.id !== id))
+        })
+    }
   }
 
   const handleInputName = (event) => {
