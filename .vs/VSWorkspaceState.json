@@ -1,14 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\part1\\src",
-    "\\part1\\src\\services",
-    "\\part2",
-    "\\part2\\countries\\src",
-    "\\part2\\phonebook",
     "\\part2\\phonebook\\src",
-    "\\part2\\phonebook\\src\\services"
+    "\\part2\\phonebook\\src\\services",
+    "\\part3"
   ],
-  "SelectedNode": "\\part2\\phonebook\\src\\Person.js",
+  "SelectedNode": "\\part3\\package.json",
   "PreviewInSolutionExplorer": false
 }
