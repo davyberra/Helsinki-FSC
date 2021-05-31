@@ -1,8 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\part1",
+    "\\part1\\src",
+    "\\part1\\src\\services",
+    "\\part2\\phonebook\\src",
+    "\\part2\\phonebook\\src\\services",
     "\\part3"
   ],
-  "SelectedNode": "\\part1",
+  "SelectedNode": "\\part3\\Procfile",
   "PreviewInSolutionExplorer": false
 }
