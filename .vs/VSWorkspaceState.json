@@ -1,13 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\part1",
-    "\\part1\\src",
-    "\\part1\\src\\services",
-    "\\part2\\phonebook\\src",
-    "\\part2\\phonebook\\src\\services",
+    "\\NotesAppBackEnd",
+    "\\NotesAppFrontEnd",
+    "\\NotesAppFrontEnd\\src\\services",
     "\\part3"
   ],
-  "SelectedNode": "\\part3\\Procfile",
+  "SelectedNode": "\\part3\\.gitignore",
   "PreviewInSolutionExplorer": false
 }
