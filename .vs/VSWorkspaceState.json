@@ -3,9 +3,10 @@
     "",
     "\\NotesAppBackEnd",
     "\\NotesAppFrontEnd",
-    "\\NotesAppFrontEnd\\src\\services",
-    "\\part3"
+    "\\part2\\phonebook",
+    "\\part2\\phonebook\\src",
+    "\\part3\\phonebookBackend"
   ],
-  "SelectedNode": "\\part3\\.gitignore",
+  "SelectedNode": "\\NotesAppFrontEnd\\package.json",
   "PreviewInSolutionExplorer": false
 }
