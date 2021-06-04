@@ -2,11 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\NotesAppBackEnd",
+    "\\NotesAppBackEnd\\build\\static",
     "\\NotesAppFrontEnd",
-    "\\part2\\phonebook",
-    "\\part2\\phonebook\\src",
+    "\\NotesAppFrontEnd\\src",
+    "\\NotesAppFrontEnd\\src\\services",
     "\\part3\\phonebookBackend"
   ],
-  "SelectedNode": "\\NotesAppFrontEnd\\package.json",
+  "SelectedNode": "\\NotesAppFrontEnd\\src\\services\\notes.js",
   "PreviewInSolutionExplorer": false
 }
